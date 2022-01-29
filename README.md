@@ -38,3 +38,8 @@
     <h2> Diagram 2 (Activity Diagram)</h2>
     <img src="./images/CrunchIt ActivityDiagram.jpeg" />
 </div>
+
+<div>
+    <h2> Miro Business Idea</h2>
+    <img src="./images/Miro Business Idea.jpg" />
+</div>
