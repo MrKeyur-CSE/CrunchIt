@@ -1,4 +1,4 @@
-<img align="right" src="./images/Crunchit-blackSmall.png" height="90" width="90"/> 
+<img align="right" src="./images/Crunchit-blackSmall.png" height="75" width="75"/> 
 
 <div align="center">
     <h1>CrunchIt</h1>
