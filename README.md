@@ -1,4 +1,4 @@
-<img align="right" src="./images/Crunchit-blackSmall.png" height="50" width="50"/> 
+<img align="right" src="./images/Crunchit-blackSmall.png" height="90" width="90"/> 
 
 <div align="center">
     <h1>CrunchIt</h1>
@@ -24,7 +24,7 @@
 
 <div>
     <h2> Description </h2>
-    <p>While We though about this business, because of we faced so many issues in this cold climate and also less availability of Indian snakes. In particular, Barrie there is a smaller number of crunchy snakes who all local residents love to have. But because of a smaller number of shops which serve this type of product, they can’t able to reach out all over the place to deliver the products. Additionally, there is less competition, so that they are selling products on high prices and people must have to buy that product with over price. Like this there is so many problems in this business. </p>'
+    <p>While We though about this business, because of we faced so many issues in this cold climate and also less availability of Indian snakes. In particular, Barrie there is a smaller number of crunchy snakes who all local residents love to have. But because of a smaller number of shops which serve this type of product, they can’t able to reach out all over the place to deliver the products. Additionally, there is less competition, so that they are selling products on high prices and people must have to buy that product with over price. Like this there is so many problems in this business. </p>
     <p>Well, we want to offer every individual, an application or a website from where then can order snakes for anytime without any difficulty. As we know, there are so many students who study and also work together, sometime they didn’t get a time to go for shopping. They can able to snakes items and schedule their delivery time. If they immediate delivery, that can also possible. This application/website will remain for Indian or traditional snakes, who people love to have with best prices. Because of this business, people don’t have to pay as much as they are paying now for the snakes and also, they get their snakes at their home without any hassle. </p>
     <p>About the flow of our application and interaction with users and admin will me explain in more details in further diagrams. [See Diagram 1 and Diagram 2]</p>
 </div>
