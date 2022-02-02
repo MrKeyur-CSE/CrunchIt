@@ -46,5 +46,5 @@
 
 <div>
     <h2> Miro Business Idea</h2>
-    <img src="./images/Miro Business Idea.jpeg" />
+    <img src="./images/Miro Business Idea.png" />
 </div>
