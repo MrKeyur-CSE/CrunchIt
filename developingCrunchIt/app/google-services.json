@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "959518118191",
+    "project_id": "crunchit-d1791",
+    "storage_bucket": "crunchit-d1791.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959518118191:android:ca98f9dae0c8024aa051da",
+        "android_client_info": {
+          "package_name": "com.example.crunchit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959518118191-mjqnav4t2pc7baitmvjii2rr5ognke6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7xEJQgQqH3Q0Xvri3nCSf9I7MQXSpiAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959518118191-mjqnav4t2pc7baitmvjii2rr5ognke6a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
