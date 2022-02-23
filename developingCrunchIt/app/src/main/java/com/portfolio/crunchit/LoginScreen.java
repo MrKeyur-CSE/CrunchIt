@@ -57,7 +57,9 @@ public class LoginScreen extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            Toast.makeText(getApplicationContext(), "You're in...",
+                                    Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(LoginScreen.this, MainActivity.class));
 
                         } else {
                             // If sign in fails, display a message to the user.
