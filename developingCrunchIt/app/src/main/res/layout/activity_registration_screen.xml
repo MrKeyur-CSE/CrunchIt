@@ -121,7 +121,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bluetheme_roundshape"
         android:fontFamily="@font/poppins"
-        android:text="Registration"
+        android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
