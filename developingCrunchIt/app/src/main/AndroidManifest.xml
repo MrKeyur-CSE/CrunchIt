@@ -13,10 +13,10 @@
         android:theme="@style/Theme.CrunchIt">
         <activity
             android:name=".LoginScreen"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".RegistrationScreen"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

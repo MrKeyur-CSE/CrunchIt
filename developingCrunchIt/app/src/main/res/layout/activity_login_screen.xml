@@ -66,7 +66,7 @@
         android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/bluetheme_roundshape"
         android:fontFamily="@font/poppins"
         android:text="Login"

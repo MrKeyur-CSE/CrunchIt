@@ -3,6 +3,7 @@ package com.example.crunchit;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -32,11 +33,19 @@ public class LoginScreen extends AppCompatActivity {
         final Button mLoginBtn = findViewById(R.id.loginBtn);
         final TextView mNotRegister = findViewById(R.id.notRegister);
 
+        mNotRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), RegistrationScreen.class));
+            }
+        });
+
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-
+                email = mEmail.getText().toString().trim();
+                password = mPass.getText().toString().trim();
                 signUp();
 
             }
@@ -50,8 +59,8 @@ public class LoginScreen extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            FirebaseUser user = mAuth.getCurrentUser();
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(getApplicationContext(), "Authentication failed.",

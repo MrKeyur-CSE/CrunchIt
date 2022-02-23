@@ -52,13 +52,12 @@ public class RegistrationScreen extends AppCompatActivity {
         pwordConfrmEdtTxt = (EditText) findViewById(R.id.rePassword);
 
         loginLabel = (TextView) findViewById(R.id.notRegisteredLogin);
-        Toast.makeText(getApplicationContext(), "Test Toast", Toast.LENGTH_LONG).show();
 
         loginLabel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Test Toast", Toast.LENGTH_LONG).show();
-
+                startActivity(new Intent(getApplicationContext(), LoginScreen.class));
 
             }
         });
@@ -69,7 +68,6 @@ public class RegistrationScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(getApplicationContext(), "Test Toast", Toast.LENGTH_LONG).show();
 
                 fullName = userFullNameEdtTxt.getText().toString().trim();
                 email = emailEdtTxt.getText().toString().trim();
@@ -104,12 +102,11 @@ public class RegistrationScreen extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 User newUser = new User();
-                                database.getReference("Users").child(user.getUid()).setValue(newUser).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                myRef.child("Users").child(user.getUid()).setValue(newUser).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
-                                        Toast.makeText(getApplicationContext(), "Sign up sucessful.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "Sign up successful.", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
-
                                     }
                                 });
                             } else {
