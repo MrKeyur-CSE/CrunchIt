@@ -9,6 +9,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,7 +28,7 @@ public class RegistrationScreen extends AppCompatActivity {
     public EditText phNumberEdtTxt;
     public EditText pwordEdtTxt;
     public EditText pwordConfrmEdtTxt;
-
+    public TextView loginLabel;
 
 
 
@@ -44,18 +45,32 @@ public class RegistrationScreen extends AppCompatActivity {
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
-        registerNewUserBtn = (Button) findViewById(R.id.registerBtn);
         userFullNameEdtTxt = (EditText) findViewById(R.id.fullName);
         emailEdtTxt = (EditText) findViewById(R.id.emailAddress);
         phNumberEdtTxt = (EditText) findViewById(R.id.phoneNumber);
         pwordEdtTxt = (EditText) findViewById(R.id.password);
         pwordConfrmEdtTxt = (EditText) findViewById(R.id.rePassword);
 
+        loginLabel = (TextView) findViewById(R.id.notRegisteredLogin);
+        Toast.makeText(getApplicationContext(), "Test Toast", Toast.LENGTH_LONG).show();
 
+        loginLabel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Test Toast", Toast.LENGTH_LONG).show();
+
+
+            }
+        });
+
+        registerNewUserBtn = (Button) findViewById(R.id.registerBtn);
 
         registerNewUserBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
+
+                Toast.makeText(getApplicationContext(), "Test Toast", Toast.LENGTH_LONG).show();
+
                 fullName = userFullNameEdtTxt.getText().toString().trim();
                 email = emailEdtTxt.getText().toString().trim();
                 phNumber = phNumberEdtTxt.getText().toString().trim();

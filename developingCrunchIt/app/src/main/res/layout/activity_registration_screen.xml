@@ -116,6 +116,7 @@
         app:layout_constraintTop_toBottomOf="@+id/rePassword" />
 
     <Button
+        android:clickable="true"
         android:id="@+id/registerBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
