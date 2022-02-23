@@ -17,6 +17,7 @@
         <li> <a href="mailto:200504263@student.georgianc.on.ca" target="_blank">Darshini Selvaraj</a>- 200504263 </li>
         <li> <a href="mailto:200507104@student.georgianc.on.ca" target="_blank">Kevin Rabari</a>- 200507104 </li>
         <li> <a href="mailto:200507086@student.georgianc.on.ca" target="_blank">Keyur Panchal</a>- 200507086 </li>
+        <li> <a href="mailto:200502111@student.georgianc.on.ca" target="_blank">Daryl Valairan Ramesh</a>- 200502111 </li>
     </ul>
 </div>
 
