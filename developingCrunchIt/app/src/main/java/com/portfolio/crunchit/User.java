@@ -1,4 +1,4 @@
-package com.example.crunchit;
+package com.portfolio.crunchit;
 
 public class User {
     public String fullName;

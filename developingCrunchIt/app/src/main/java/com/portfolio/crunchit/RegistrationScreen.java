@@ -1,4 +1,4 @@
-package com.example.crunchit;
+package com.portfolio.crunchit;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,10 +33,10 @@ public class RegistrationScreen extends AppCompatActivity {
 
 
     private FirebaseAuth mAuth;
-    String email = "", password = "", rePassword = "", fullName = "", phNumber = "", emailAddress = "";
+    String email = "", password = "", rePassword = "", fullName = "", phNumber = "";
     // Write a message to the database
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference();
+    FirebaseDatabase database;
+    DatabaseReference myRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,8 @@ public class RegistrationScreen extends AppCompatActivity {
         setContentView(R.layout.activity_registration_screen);
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
-
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference();
         userFullNameEdtTxt = (EditText) findViewById(R.id.fullName);
         emailEdtTxt = (EditText) findViewById(R.id.emailAddress);
         phNumberEdtTxt = (EditText) findViewById(R.id.phoneNumber);
@@ -56,7 +57,6 @@ public class RegistrationScreen extends AppCompatActivity {
         loginLabel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Test Toast", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(getApplicationContext(), LoginScreen.class));
 
             }
