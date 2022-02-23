@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,16 +51,17 @@ public class RegistrationScreen extends AppCompatActivity {
         pwordEdtTxt = (EditText) findViewById(R.id.emailAddress);
         pwordConfrmEdtTxt = (EditText) findViewById(R.id.emailAddress);
 
-        fullName = userFullNameEdtTxt.getText().toString().trim();
-        email = emailEdtTxt.getText().toString().trim();
-        phNumber = phNumberEdtTxt.getText().toString().trim();
-        password = pwordEdtTxt.getText().toString().trim();
-        rePassword = pwordConfrmEdtTxt.getText().toString().trim();
 
 
         registerNewUserBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                fullName = userFullNameEdtTxt.getText().toString().trim();
+                email = emailEdtTxt.getText().toString().trim();
+                phNumber = phNumberEdtTxt.getText().toString().trim();
+                password = pwordEdtTxt.getText().toString().trim();
+                rePassword = pwordConfrmEdtTxt.getText().toString().trim();
+
                 createAccount();
 
             }
@@ -69,6 +71,16 @@ public class RegistrationScreen extends AppCompatActivity {
 
     private void createAccount() {
         // [START create_user_with_email]
+        if (email.isEmpty() || password.isEmpty() || fullName.isEmpty() || rePassword.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Fields are empty...", Toast.LENGTH_SHORT).show();
+            return;
+        } else {
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                emailEdtTxt.setError("Please enter a valid email.");
+                return;
+            }
+        }
+
         if(password.equals(rePassword)){
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -77,8 +89,14 @@ public class RegistrationScreen extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 User newUser = new User();
-                                database.getReference("Users");
-                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                database.getReference("Users").child(user.getUid()).setValue(newUser).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        Toast.makeText(getApplicationContext(), "Sign up sucessful.", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+                                    }
+                                });
                             } else {
                                 Toast.makeText(getApplicationContext(), "Registration Failed...", Toast.LENGTH_LONG).show();
                             }
