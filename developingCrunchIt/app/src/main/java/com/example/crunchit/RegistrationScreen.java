@@ -45,11 +45,11 @@ public class RegistrationScreen extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         registerNewUserBtn = (Button) findViewById(R.id.registerBtn);
-        userFullNameEdtTxt = (EditText) findViewById(R.id.emailAddress);
+        userFullNameEdtTxt = (EditText) findViewById(R.id.fullName);
         emailEdtTxt = (EditText) findViewById(R.id.emailAddress);
-        phNumberEdtTxt = (EditText) findViewById(R.id.emailAddress);
-        pwordEdtTxt = (EditText) findViewById(R.id.emailAddress);
-        pwordConfrmEdtTxt = (EditText) findViewById(R.id.emailAddress);
+        phNumberEdtTxt = (EditText) findViewById(R.id.phoneNumber);
+        pwordEdtTxt = (EditText) findViewById(R.id.password);
+        pwordConfrmEdtTxt = (EditText) findViewById(R.id.rePassword);
 
 
 
