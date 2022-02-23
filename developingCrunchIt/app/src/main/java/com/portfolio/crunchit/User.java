@@ -9,9 +9,9 @@ public class User {
 
     }
 
-    public User(String Name, String email, String phNumber){
+    public User(String Name, String Email, String phNumber){
         this.fullName = Name;
-        this.email = email;
+        this.email = Email;
         this.number = phNumber;
     }
 }
