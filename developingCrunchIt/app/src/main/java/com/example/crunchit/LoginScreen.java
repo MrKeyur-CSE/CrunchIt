@@ -25,23 +25,6 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                final String emailTxt = mEmail.getText().toString().trim();
-                final String passwordTxt = mPass.getText().toString().trim();
-
-                if (TextUtils.isEmpty(emailTxt)) {
-                    mEmail.setError("Email Address is Require.");
-                    return;
-                }
-
-                if (TextUtils.isEmpty(passwordTxt)) {
-                    mPass.setError("Password is Require.");
-                    return;
-                }
-
-                if (passwordTxt.length() < 6) {
-                    mPass.setError("Password must be grater than 6 digit.");
-                    return;
-                }
 
             }
         });
