@@ -17,8 +17,8 @@
         android:paddingTop="7dp"
         android:text="Select address"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="439dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="441dp" />
 
     <Button
         android:id="@+id/editProfileBtn"

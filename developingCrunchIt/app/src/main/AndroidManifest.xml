@@ -24,6 +24,9 @@
             android:name=".activityCheckoutScreen"
             android:exported="false" />
         <activity
+            android:name=".HomeScreen"
+            android:exported="false" />
+        <activity
             android:name=".LoginScreen"
             android:exported="true">
             <intent-filter>
