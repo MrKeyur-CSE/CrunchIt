@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activityCheckoutScreen">
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="358"
+        android:layout_height="62"
+        android:background="@drawable/bluetheme_roundshape"
+        android:fontFamily="@font/poppins"
+        android:text="Next"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="637dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/addressLabel2"
+        android:layout_width="311dp"
+        android:layout_height="56dp"
+        android:background="@drawable/greytheme_roundshape"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/poppins"
+        android:hint="Regular time"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingTop="7dp"
+        android:text="Regular time"
+        android:textColor="#9C9C9C"
+        android:textSize="15sp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="309dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/addressLabel3"
+        android:layout_width="312dp"
+        android:layout_height="59dp"
+        android:background="@drawable/greytheme_roundshape"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/poppins"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingTop="7dp"
+        android:text="Scheduled time"
+        android:textColor="#9C9C9C"
+        android:textSize="15sp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="268dp"
+        android:layout_height="46dp"
+        android:fontFamily="@font/poppins"
+        android:text="Delivery Details"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="256dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/addressLabel"
+        android:layout_width="316dp"
+        android:layout_height="58dp"
+        android:background="@drawable/greytheme_roundshape"
+        android:fontFamily="@font/poppins"
+        android:hint="Enter address"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingTop="7dp"
+        android:text="Enter address"
+        android:textSize="15sp"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="142dp" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/poppins"
+        android:text="Back"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="296dp"
+        android:layout_height="45dp"
+        android:fontFamily="@font/poppins"
+        android:text="Delivery Address"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="89dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
