@@ -3,7 +3,10 @@ package com.portfolio.crunchit;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference myRef;
     FirebaseUser currentUser;
     FirebaseAuth auth;
+
+    private Button Accountsrnbutton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +53,19 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        Accountsrnbutton = findViewById(R.id.accountsrnBtn);
+        Accountsrnbutton.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               openAccountScreen();
+           }
+       });
+    }
+    public void openAccountScreen(){
+        Intent intent= new Intent(this,accountScreen.class);
+        startActivity(intent);
+
 
     }
 }

@@ -38,7 +38,7 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/checkSettingsBtn"
+            android:id="@+id/aa"
             android:layout_width="348dp"
             android:layout_height="61dp"
             android:layout_marginLeft="23dp"
@@ -67,6 +67,12 @@
             android:textSize="20dp"
             tools:layout_editor_absoluteX="31dp"
             tools:layout_editor_absoluteY="180dp" />
+
+        <Button
+            android:id="@+id/checkSettingsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
     </LinearLayout>
 
 </LinearLayout>
