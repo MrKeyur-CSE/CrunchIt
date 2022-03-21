@@ -9,10 +9,10 @@
         <entry key="app/src/main/res/layout/activity_checkout_screen.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_crunch_it_resgister_screen.xml" value="0.2848663330078125" />
         <entry key="app/src/main/res/layout/activity_edit_account_screen.xml" value="0.2180699666341146" />
-        <entry key="app/src/main/res/layout/activity_login_screen.xml" value="0.3723312377929688" />
+        <entry key="app/src/main/res/layout/activity_login_screen.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_registration_screen.xml" value="0.19142608642578135" />
-        <entry key="app/src/main/res/layout/activity_setting_screen.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_setting_screen.xml" value="0.1" />
         <entry key="app/src/main/res/layout/checkout_screen.xml" value="0.20819396972656243" />
       </map>
     </option>

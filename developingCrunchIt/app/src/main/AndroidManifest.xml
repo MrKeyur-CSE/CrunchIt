@@ -13,16 +13,16 @@
         android:theme="@style/Theme.CrunchIt">
         <activity
             android:name=".editAccountScreen"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".settingScreen"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".accountScreen"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activityCheckoutScreen"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".LoginScreen"
             android:exported="true">

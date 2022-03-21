@@ -1,44 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="7"
     tools:context=".settingScreen">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/addressField"
-        android:layout_width="348dp"
-        android:layout_height="61dp"
-        android:background="@drawable/greytheme_roundshape"
-        android:fontFamily="@font/poppins"
-        android:inputType="textWebEmailAddress"
-        android:paddingStart="20dp"
-        android:paddingTop="7dp"
-        android:text="Select address"
-        android:textSize="20dp"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="439dp" />
 
-    <Button
-        android:id="@+id/editProfileBtn"
-        android:layout_width="203dp"
-        android:layout_height="50dp"
-        android:background="@drawable/bluetheme_roundshape"
-        android:fontFamily="@font/poppins"
-        android:text="Edit Profile"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="273dp" />
-
-    <Button
-        android:id="@+id/signOutBtn"
-        android:layout_width="203dp"
-        android:layout_height="50dp"
-        android:background="@drawable/bluetheme_roundshape"
-        android:fontFamily="@font/poppins"
-        android:text="Sign Out"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="622dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="260dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
 
     <Button
         android:id="@+id/backBtn2"
@@ -50,26 +26,103 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="109dp"
-        android:layout_height="44dp"
-        android:fontFamily="@font/poppins"
-        android:text="Setting"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="35dp" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="109dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/poppins"
+            android:text="Setting"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="35dp" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="236dp"
-        android:layout_height="38dp"
-        android:fontFamily="@font/poppins"
-        android:text="Saved Address"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="375dp" />
+    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="-305dp"
+        android:layout_marginBottom="260dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/editProfileBtn"
+            android:layout_width="203dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="105dp"
+            android:background="@drawable/bluetheme_roundshape"
+            android:fontFamily="@font/poppins"
+            android:text="Edit Profile"
+            tools:layout_editor_absoluteX="104dp"
+            tools:layout_editor_absoluteY="273dp" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="-305dp"
+        android:layout_marginBottom="260dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="236dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="35dp"
+            android:fontFamily="@font/poppins"
+            android:text="Saved Address"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="44dp"
+            tools:layout_editor_absoluteY="375dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addressField"
+            android:layout_width="348dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/greytheme_roundshape"
+            android:fontFamily="@font/poppins"
+            android:inputType="textWebEmailAddress"
+            android:paddingStart="20dp"
+            android:paddingTop="7dp"
+            android:text="Select address"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="44dp"
+            tools:layout_editor_absoluteY="439dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="-270dp"
+        android:layout_marginBottom="260dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/signOutBtn"
+            android:layout_width="358dp"
+            android:layout_height="62dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="135dp"
+            android:background="@drawable/bluetheme_roundshape"
+            android:fontFamily="@font/poppins"
+            android:text="Sign Out"
+            tools:layout_editor_absoluteX="104dp"
+            tools:layout_editor_absoluteY="622dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
