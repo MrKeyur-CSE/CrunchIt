@@ -27,7 +27,7 @@ public class LoginScreen extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         final EditText mEmail = findViewById(R.id.email);
-        final EditText mPass = findViewById(R.id.pass);
+        final EditText mPass = findViewById(R.id.password);
         final Button mLoginBtn = findViewById(R.id.loginBtn);
         final TextView mNotRegister = findViewById(R.id.notRegister);
 
@@ -42,31 +42,34 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
-//               email = mEmail.getText().toString().trim();
-//                password = mPass.getText().toString().trim();
-//                signUp();
+                email = mEmail.getText().toString().trim();
+                password = mPass.getText().toString().trim();
+                if(email.isEmpty() || password.isEmpty())
+                    signUp();
+                else
+                    Toast.makeText(getApplicationContext(), "Fields are empty...", Toast.LENGTH_SHORT).show();
 
             }
         });
     }
 
 
-//    public void signUp() {
-//        mAuth.signInWithEmailAndPassword(email, password)
-//                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//                        if (task.isSuccessful()) {
-//                            Toast.makeText(getApplicationContext(), "You're in...",
-//                                    Toast.LENGTH_SHORT).show();
-//                            startActivity(new Intent(LoginScreen.this, MainActivity.class));
-//
-//                        } else {
-//                            // If sign in fails, display a message to the user.
-//                            Toast.makeText(getApplicationContext(), "Authentication failed.",
-//                                    Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                });
-//    }
+    public void signUp() {
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(), "You're in...",
+                                    Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(LoginScreen.this, MainActivity.class));
+
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Toast.makeText(getApplicationContext(), "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
 }
