@@ -106,7 +106,7 @@ public class RegistrationScreen extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         Toast.makeText(getApplicationContext(), "Sign up successful.", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                        startActivity(new Intent(getApplicationContext(), HomeScreen.class));
                                     }
                                 });
                             } else {

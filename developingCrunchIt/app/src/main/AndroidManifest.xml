@@ -38,9 +38,6 @@
         <activity
             android:name=".RegistrationScreen"
             android:exported="true" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
     </application>
 
 </manifest>

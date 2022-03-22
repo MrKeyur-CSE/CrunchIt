@@ -41,13 +41,10 @@ public class LoginScreen extends AppCompatActivity {
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), HomeScreen.class));
                 email = mEmail.getText().toString().trim();
                 password = mPass.getText().toString().trim();
-                if(email.isEmpty() || password.isEmpty())
-                    signUp();
-                else
-                    Toast.makeText(getApplicationContext(), "Fields are empty...", Toast.LENGTH_SHORT).show();
+                signUp();
 
             }
         });
@@ -55,6 +52,11 @@ public class LoginScreen extends AppCompatActivity {
 
 
     public void signUp() {
+        if(email.isEmpty() || password.isEmpty()){
+            Toast.makeText(getApplicationContext(), "Fields are empty...", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -62,7 +64,7 @@ public class LoginScreen extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "You're in...",
                                     Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(LoginScreen.this, MainActivity.class));
+                            startActivity(new Intent(LoginScreen.this, HomeScreen.class));
 
                         } else {
                             // If sign in fails, display a message to the user.
