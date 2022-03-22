@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseUser currentUser;
     FirebaseAuth auth;
 
-    private Button Accountsrnbutton;
+    private Button accountsrcBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,26 +45,29 @@ public class MainActivity extends AppCompatActivity {
         myRef.child("Users").child(currentUser.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
-                if(task.isSuccessful()){
+                if (task.isSuccessful()) {
                     User temp = task.getResult().getValue(User.class);
                     uName.setText("Name  : " + temp.fullName);
-                    email.setText("Mail  : " +temp.email);
-                    phone.setText("Phone : " +temp.number);
+                    email.setText("Mail  : " + temp.email);
+                    phone.setText("Phone : " + temp.number);
                 }
             }
         });
 
-        Accountsrnbutton = findViewById(R.id.accountsrnBtn);
-        Accountsrnbutton.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               openAccountScreen();
-           }
-       });
+        accountsrcBtn = findViewById(R.id.accountsrcBtn);
+        accountsrcBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoaccount();
+
+            }
+        });
     }
-    public void openAccountScreen(){
+    public void gotoaccount(){
         Intent intent= new Intent(this,accountScreen.class);
         startActivity(intent);
+        finish();
+
 
 
     }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+
 public class accountScreen extends AppCompatActivity {
     private Button settingBtn;
     private Button orderBtn;
@@ -15,7 +16,7 @@ public class accountScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_screen);
 
-        settingBtn = findViewById(R.id.checkSettingsBtn);
+        settingBtn = findViewById(R.id.settingBtn);
         settingBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -26,7 +27,10 @@ public class accountScreen extends AppCompatActivity {
     public void openSettingScreen(){
         Intent intent= new Intent(this,settingScreen.class);
         startActivity(intent);
+        finish();
 
 
     }
+
+
 }

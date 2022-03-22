@@ -37,20 +37,17 @@
         android:layout_weight="3"
         android:orientation="vertical">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/aa"
+        <Button
+            android:id="@+id/settingBtn"
             android:layout_width="348dp"
             android:layout_height="61dp"
             android:layout_marginLeft="23dp"
-            android:background="@drawable/greytheme_roundshape"
+            android:background="@drawable/bluetheme_roundshape"
             android:fontFamily="@font/poppins"
-            android:inputType="textWebEmailAddress"
-            android:paddingStart="20dp"
-            android:paddingTop="7dp"
-            android:text="Settings"
+            android:text="Setting"
             android:textSize="20dp"
-            tools:layout_editor_absoluteX="31dp"
-            tools:layout_editor_absoluteY="253dp" />
+            tools:layout_editor_absoluteX="104dp"
+            tools:layout_editor_absoluteY="622dp" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/checkOrderBtn"
@@ -67,12 +64,6 @@
             android:textSize="20dp"
             tools:layout_editor_absoluteX="31dp"
             tools:layout_editor_absoluteY="180dp" />
-
-        <Button
-            android:id="@+id/checkSettingsBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
     </LinearLayout>
 
 </LinearLayout>
