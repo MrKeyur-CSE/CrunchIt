@@ -3,7 +3,10 @@ package com.portfolio.crunchit;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference myRef;
     FirebaseUser currentUser;
     FirebaseAuth auth;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,14 +45,13 @@ public class MainActivity extends AppCompatActivity {
         myRef.child("Users").child(currentUser.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
-                if(task.isSuccessful()){
+                if (task.isSuccessful()) {
                     User temp = task.getResult().getValue(User.class);
                     uName.setText("Name  : " + temp.fullName);
-                    email.setText("Mail  : " +temp.email);
-                    phone.setText("Phone : " +temp.number);
+                    email.setText("Mail  : " + temp.email);
+                    phone.setText("Phone : " + temp.number);
                 }
             }
         });
-
     }
 }
