@@ -44,10 +44,11 @@ public class LoginScreen extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 email = mEmail.getText().toString().trim();
                 password = mPass.getText().toString().trim();
+
                 if(email.isEmpty() || password.isEmpty())
-                    signUp();
-                else
                     Toast.makeText(getApplicationContext(), "Fields are empty...", Toast.LENGTH_SHORT).show();
+                else
+                    signUp();
 
             }
         });

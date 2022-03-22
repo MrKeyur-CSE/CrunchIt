@@ -22,10 +22,10 @@
             android:layout_height="wrap_content"
             android:background="@drawable/greytheme_roundshape"
             android:fontFamily="@font/poppins"
+            android:hint="Full Name"
             android:inputType="textWebEmailAddress"
             android:paddingStart="20dp"
             android:paddingTop="7dp"
-            android:text="    Full Name"
             android:textSize="20dp"
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="182dp" />
@@ -37,10 +37,10 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/greytheme_roundshape"
             android:fontFamily="@font/poppins"
+            android:hint="E-mail Address"
             android:inputType="textWebEmailAddress"
             android:paddingStart="20dp"
             android:paddingTop="7dp"
-            android:text="    E-mail Address"
             android:textSize="20dp"
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="250dp" />
@@ -52,14 +52,13 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/greytheme_roundshape"
             android:fontFamily="@font/poppins"
+            android:hint="Address"
             android:inputType="textWebEmailAddress"
             android:paddingStart="20dp"
             android:paddingTop="7dp"
-            android:text="    Address"
             android:textSize="20dp"
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="388dp" />
-
 
 
         <com.google.android.material.textfield.TextInputEditText
@@ -69,13 +68,14 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/greytheme_roundshape"
             android:fontFamily="@font/poppins"
+            android:hint="Phone Number"
             android:inputType="textWebEmailAddress"
             android:paddingStart="20dp"
             android:paddingTop="7dp"
-            android:text="    Phone Number"
             android:textSize="20dp"
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="318dp" />
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password2"
             android:layout_width="wrap_content"
@@ -83,10 +83,10 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/greytheme_roundshape"
             android:fontFamily="@font/poppins"
+            android:hint="Password"
             android:inputType="textWebEmailAddress"
             android:paddingStart="20dp"
             android:paddingTop="7dp"
-            android:text="    Password"
             android:textSize="20dp"
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="457dp" />
@@ -108,6 +108,7 @@
             android:layout_marginLeft="100dp"
             android:background="@drawable/bluetheme_roundshape"
             android:fontFamily="@font/poppins"
+            android:onClick="update"
             android:text="Update"
             tools:layout_editor_absoluteX="120dp"
             tools:layout_editor_absoluteY="571dp" />
