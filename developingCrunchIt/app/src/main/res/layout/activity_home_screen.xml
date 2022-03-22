@@ -14,7 +14,23 @@
         android:layout_height="match_parent"
         android:layout_margin="12dp"/>
 
-
+    <Button
+        android:id="@+id/gotoacountSrn"
+        android:layout_width="203dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="183dp"
+        android:background="@drawable/bluetheme_roundshape"
+        android:fontFamily="@font/poppins"
+        android:text="Go TO Account"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="273dp" />
 
 
 </RelativeLayout>

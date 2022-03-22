@@ -7,9 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class settingScreen extends AppCompatActivity {
+
     private Button signOutBtn;
     private  Button editProfileBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +26,6 @@ public class settingScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 gotoEditprofile();
-
             }
         });
 
@@ -30,21 +33,17 @@ public class settingScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Signout();
-
             }
         });
     }
     public void gotoEditprofile(){
         Intent intent= new Intent(this,editAccountScreen.class);
         startActivity(intent);
-
-
     }
     public void Signout(){
-        Intent intent= new Intent(this,LoginScreen.class);
+//        FirebaseAuth.getInstance().signOut();
+        Intent intent= new Intent(getApplicationContext(),LoginScreen.class);
         startActivity(intent);
         finish();
-
-
     }
 }
