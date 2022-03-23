@@ -39,14 +39,12 @@ public class HomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
-        final Button gotoacountSrn;
 
         database = FirebaseDatabase.getInstance();
         databaseRefRoot = database.getReference("Items");
         databaseRefInventory = databaseRefRoot;
 
         inventoryRecyclerView = findViewById(R.id.ListOfProducts);
-        gotoacountSrn = findViewById(R.id.gotoacountSrn);
 
 
         listOfItems = new ArrayList<>();
@@ -81,13 +79,6 @@ public class HomeScreen extends AppCompatActivity {
         databaseRefInventory.addValueEventListener(inventoryListener);
         itemSelectorAdapter.notifyDataSetChanged();
 
-        gotoacountSrn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent= new Intent(HomeScreen.this,accountScreen.class);
-                startActivity(intent);
-            }
-        });
 
     }
 }
