@@ -8,7 +8,7 @@
     android:layout_marginTop="16dp"
     android:animateLayoutChanges="true"
     app:cardCornerRadius="4dp"
-    tools:context="com.portfolio.crunchit.ListItem">
+    tools:context="com.portfolio.crunchit.Fragments.ListItem">
 
     <RelativeLayout
         android:layout_width="match_parent"

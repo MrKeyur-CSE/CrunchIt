@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="7"
-    tools:context=".activityCheckoutScreen">
+    tools:context=".Activities.activityCheckoutScreen">
 
 
     <LinearLayout

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="7"
-    tools:context=".RegistrationScreen">
+    tools:context=".Activities.RegistrationScreen">
 
 
     <ImageView

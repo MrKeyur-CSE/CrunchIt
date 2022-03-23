@@ -12,22 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CrunchIt">
         <activity
-            android:name=".editAccountScreen"
+            android:name=".Activities.editAccountScreen"
             android:exported="true" />
         <activity
-            android:name=".settingScreen"
+            android:name=".Activities.settingScreen"
             android:exported="true" />
         <activity
-            android:name=".accountScreen"
+            android:name=".Activities.accountScreen"
             android:exported="true" />
         <activity
-            android:name=".activityCheckoutScreen"
+            android:name=".Activities.activityCheckoutScreen"
             android:exported="true" />
         <activity
-            android:name=".HomeScreen"
+            android:name=".Activities.HomeScreen"
             android:exported="false" />
         <activity
-            android:name=".LoginScreen"
+            android:name=".Activities.LoginScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +36,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegistrationScreen"
+            android:name=".Activities.RegistrationScreen"
             android:exported="true" />
     </application>
 

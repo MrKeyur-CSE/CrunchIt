@@ -1,8 +1,10 @@
-package com.portfolio.crunchit;
+package com.portfolio.crunchit.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.portfolio.crunchit.R;
 
 public class activityCheckoutScreen extends AppCompatActivity {
 

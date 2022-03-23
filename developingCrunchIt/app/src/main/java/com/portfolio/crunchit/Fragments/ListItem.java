@@ -1,4 +1,4 @@
-package com.portfolio.crunchit;
+package com.portfolio.crunchit.Fragments;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.portfolio.crunchit.R;
 
 import java.net.URI;
 

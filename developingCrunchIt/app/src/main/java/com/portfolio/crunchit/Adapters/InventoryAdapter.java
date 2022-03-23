@@ -1,4 +1,4 @@
-package com.portfolio.crunchit;
+package com.portfolio.crunchit.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +8,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.io.PipedOutputStream;
+import com.portfolio.crunchit.Abstract.Item;
+import com.portfolio.crunchit.R;
+
 import java.util.ArrayList;
 
 public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.InventoryViewHolder> {

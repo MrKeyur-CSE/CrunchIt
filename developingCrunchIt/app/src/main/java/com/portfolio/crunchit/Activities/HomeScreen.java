@@ -1,4 +1,4 @@
-package com.portfolio.crunchit;
+package com.portfolio.crunchit.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.os.Debug;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -15,6 +14,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.portfolio.crunchit.Adapters.InventoryAdapter;
+import com.portfolio.crunchit.Abstract.Item;
+import com.portfolio.crunchit.R;
 
 import java.util.ArrayList;
 

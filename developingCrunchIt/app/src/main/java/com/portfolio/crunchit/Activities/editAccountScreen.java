@@ -1,4 +1,4 @@
-package com.portfolio.crunchit;
+package com.portfolio.crunchit.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +14,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.portfolio.crunchit.R;
+import com.portfolio.crunchit.Abstract.User;
 
 public class editAccountScreen extends AppCompatActivity {
 

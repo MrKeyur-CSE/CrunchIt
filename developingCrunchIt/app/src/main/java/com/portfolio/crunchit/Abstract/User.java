@@ -1,4 +1,4 @@
-package com.portfolio.crunchit;
+package com.portfolio.crunchit.Abstract;
 
 public class User {
     public String fullName;
