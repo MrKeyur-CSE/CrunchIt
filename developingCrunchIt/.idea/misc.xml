@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/drawable/bluetheme_roundshape.xml" value="0.183" />
+        <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.183" />
+        <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/drawable/roundedbutton.xml" value="0.183" />
+        <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/activity_account_screen.xml" value="0.18" />
         <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/activity_edit_account_screen.xml" value="0.22" />
         <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/activity_home_screen.xml" value="0.33" />
         <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/activity_login_screen.xml" value="0.25" />
