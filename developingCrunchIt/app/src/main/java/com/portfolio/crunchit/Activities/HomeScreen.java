@@ -8,10 +8,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,7 +31,10 @@ public class HomeScreen extends AppCompatActivity {
     ArrayList<Item> listOfItems;
     InventoryAdapter itemSelectorAdapter;
     RecyclerView.LayoutManager itemSelectorLayoutManager;
+
     public RecyclerView inventoryRecyclerView;
+    public BottomNavigationView homeScreenNavBar;
+
     FirebaseDatabase database;
     DataSnapshot listSnapshotReturn;
     DatabaseReference databaseRefRoot;
@@ -45,6 +51,7 @@ public class HomeScreen extends AppCompatActivity {
         databaseRefInventory = databaseRefRoot;
 
         inventoryRecyclerView = findViewById(R.id.ListOfProducts);
+        homeScreenNavBar = findViewById(R.id.homeScreenNavbar);
 
 
         listOfItems = new ArrayList<>();
@@ -62,9 +69,9 @@ public class HomeScreen extends AppCompatActivity {
                 for (DataSnapshot ds : snapshot.getChildren()) {
                     String key = ds.getKey();
                     Log.e(" -------------------- ", key);
-                        Item temp = new Item(ds.child("itemName").getValue().toString(),
-                                ds.child("itemCost").getValue().toString());
-                        listOfItems.add(temp);
+                    Item temp = new Item(ds.child("itemName").getValue().toString(),
+                            ds.child("itemCost").getValue().toString());
+                    listOfItems.add(temp);
                 }
                 itemSelectorAdapter.notifyDataSetChanged();
             }
@@ -78,6 +85,21 @@ public class HomeScreen extends AppCompatActivity {
         };
         databaseRefInventory.addValueEventListener(inventoryListener);
         itemSelectorAdapter.notifyDataSetChanged();
+        homeScreenNavBar.setSelectedItemId(R.id.homeNavBar);
+        homeScreenNavBar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.homeNavBar:
+                        break;
+                    case R.id.searchNavBar:break;
+                    case R.id.cartNavBar:break;
+                    case R.id.accountNavBar: startActivity(new Intent(getApplicationContext(), accountScreen.class)); break;
+
+                }
+                return false;
+            }
+        });
 
 
     }

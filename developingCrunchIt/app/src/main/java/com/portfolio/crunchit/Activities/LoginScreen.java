@@ -25,8 +25,11 @@ public class LoginScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
-
         mAuth = FirebaseAuth.getInstance();
+
+        if(mAuth.getCurrentUser() != null)
+            startActivity(new Intent(LoginScreen.this, HomeScreen.class));
+
         final EditText mEmail = findViewById(R.id.email);
         final EditText mPass = findViewById(R.id.password);
         final Button mLoginBtn = findViewById(R.id.loginBtn);
