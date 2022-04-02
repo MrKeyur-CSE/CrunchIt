@@ -1,8 +1,10 @@
 package com.portfolio.crunchit.Adapters;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -31,11 +33,12 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.Inve
 
         public TextView itemName_viewHolder;
         public TextView itemCost_viewHolder;
-
+        public ImageView itemThumbnail_viewHolder;
         public InventoryViewHolder(@NonNull View itemView, final onItemClickListener listener) {
             super(itemView);
             itemName_viewHolder = itemView.findViewById(R.id.itemTitle);
             itemCost_viewHolder = itemView.findViewById(R.id.itemCost);
+            itemThumbnail_viewHolder = itemView.findViewById(R.id.itemImage);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -70,8 +73,7 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.Inve
 
         holder.itemName_viewHolder.setText(currentItem.getItemName());
         holder.itemCost_viewHolder.setText(currentItem.getItemCost());
-
-
+        holder.itemThumbnail_viewHolder.setImageBitmap(currentItem.getItemThumbnail());
 
     }
 
