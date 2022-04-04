@@ -98,11 +98,11 @@ public class HomeScreen extends AppCompatActivity {
                 listOfItems.clear();
                 listSnapshotReturn = snapshot;
                 for (DataSnapshot ds : snapshot.getChildren()) {
-                    String key = ds.getKey();
-//                    String imgUrl = "images/" + itemName + ds.child("thumbUrl").getValue().toString();
-                    String imgUrl = "images/Muruku/" + ds.child("thumbUrl").getValue().toString();
                     String itemName = ds.child("itemName").getValue().toString();
                     String itemCost = ds.child("itemCost").getValue().toString();
+                    String key = ds.getKey();
+//                    String imgUrl = "images/" + itemName +"/"+ ds.child("thumbUrl").getValue().toString();//
+                    String imgUrl = "images/Muruku/" + ds.child("thumbUrl").getValue().toString();
                     Bitmap referenceThumb = downloadThumbnail(imgUrl);
                     Log.e(" Item---------------- ", key);
                     Log.e(" Url----------------- ", imgUrl);
