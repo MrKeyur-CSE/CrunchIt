@@ -11,14 +11,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.portfolio.crunchit.R;
 
-public class CartActivity extends AppCompatActivity {
+public class Orders extends AppCompatActivity {
+
+
     public BottomNavigationView accountScreenNavBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart);
-
+        setContentView(R.layout.activity_orders);
 
         accountScreenNavBar = findViewById(R.id.accountScreenNavBar);
         accountScreenNavBar.setSelectedItemId(R.id.accountNavBar);
@@ -36,4 +37,8 @@ public class CartActivity extends AppCompatActivity {
         });
 
     }
+
+
+
+
 }

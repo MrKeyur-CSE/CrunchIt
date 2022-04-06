@@ -60,6 +60,8 @@ public class HomeScreen extends AppCompatActivity {
     FirebaseStorage storageForThumbs;
     StorageReference storageReference;
     StorageReference thumbs;
+    final Bitmap[] finalImage = new Bitmap[1];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,9 +103,10 @@ public class HomeScreen extends AppCompatActivity {
                     String itemName = ds.child("itemName").getValue().toString();
                     String itemCost = ds.child("itemCost").getValue().toString();
                     String key = ds.getKey();
-                    String imgUrl = "images/" + itemName +"/"+ ds.child("thumbUrl").getValue().toString();//
-//                    String imgUrl = "images/Muruku/" + ds.child("thumbUrl").getValue().toString();
+                    //String imgUrl = "images/" + itemName +"/"+ ds.child("thumbUrl").getValue().toString();//
+                    String imgUrl = "images/Muruku/image.png";
                     Bitmap referenceThumb = downloadThumbnail(imgUrl);
+                    referenceThumb.copy(downloadThumbnail(imgUrl).getConfig(), true);
                     Log.e(" Item---------------- ", key);
                     Log.e(" Url----------------- ", imgUrl);
                     Item temp = new Item(itemName, itemCost, referenceThumb);
@@ -129,20 +132,7 @@ public class HomeScreen extends AppCompatActivity {
 
         databaseRefInventory.addValueEventListener(inventoryListener);
         itemSelectorAdapter.notifyDataSetChanged();
-        homeScreenNavBar.setSelectedItemId(R.id.homeNavBar);
-        homeScreenNavBar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()){
-                    case R.id.homeNavBar: break;
-                    case R.id.searchNavBar:break;
-                    case R.id.cartNavBar:break;
-                    case R.id.accountNavBar: startActivity(new Intent(getApplicationContext(), accountScreen.class)); break;
 
-                }
-                return false;
-            }
-        });
 
         databaseRefRoot = database.getReference("Categories");
         databaseRefInventory = databaseRefRoot;
@@ -166,21 +156,53 @@ public class HomeScreen extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(getApplicationContext(), "Constants.GENERIC_ERROR_MSG", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Error loading buttons", Toast.LENGTH_SHORT).show();
 
             }
 
         };
+
+
         databaseRefInventory.addValueEventListener(gridButton);
 
         buttonGridAdapter = new GridLayoutAdapter(this,listOfCategories);
         catButtonGrid.setAdapter(buttonGridAdapter);
+        homeScreenNavBar.setSelectedItemId(R.id.homeNavBar);
+        homeScreenNavBar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.homeNavBar: break;
+                    case R.id.searchNavBar:startActivity(new Intent(getApplicationContext(), SearchScreen.class)); break;
+                    case R.id.cartNavBar:break;
+                    case R.id.accountNavBar: startActivity(new Intent(getApplicationContext(), accountScreen.class)); break;
 
+                }
+                return false;
+            }
+        });
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     Bitmap downloadThumbnail(String url){
 
-        final Bitmap[] finalImage = new Bitmap[1];
-        thumbs = FirebaseStorage.getInstance().getReference().child(url);
+        thumbs = storageReference.child(url);
         Log.e("------------->", thumbs.toString());
         final long MAX_BYTES = 512 * 512;
 
@@ -194,12 +216,12 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 //finalImage[0] = BitmapFactory.decodeResource(getResources(), R.drawable.loginimg);
-                Toast.makeText(getApplicationContext(), "Constants.GENERIC_ERROR_MSG", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Firebase image could not be downloaded", Toast.LENGTH_SHORT).show();
             }
         });
-        finalImage[0] = finalImage[0] == null?
-                finalImage[0] = BitmapFactory.decodeResource(getResources(), R.drawable.loginimg):
-                finalImage[0];
+
+        if (finalImage[0] == null)
+                finalImage[0] = BitmapFactory.decodeResource(getResources(), R.drawable.loginimg);
 
         return finalImage[0];
     }

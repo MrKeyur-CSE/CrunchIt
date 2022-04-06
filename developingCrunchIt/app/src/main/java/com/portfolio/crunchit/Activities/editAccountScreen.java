@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.telephony.PhoneNumberFormattingTextWatcher;
 import android.view.View;
 import android.widget.TextView;
 
@@ -41,6 +42,7 @@ public class editAccountScreen extends AppCompatActivity {
         phoneNo = findViewById(R.id.phoneno);
 
         currentUser = auth.getCurrentUser();
+        phoneNo.addTextChangedListener(new PhoneNumberFormattingTextWatcher());
 
         myRef.child("Users").child(currentUser.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override

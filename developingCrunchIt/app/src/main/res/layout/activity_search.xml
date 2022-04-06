@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SearchScreen">
+
+
+    <EditText
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/greytheme_roundshape"
+        android:hint="Search..."
+        android:paddingStart="32dp"
+        android:textSize="48dp" />
+
+
+    <TextView
+        android:id="@+id/two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/one"
+        android:layout_margin="16dp"
+        android:text="Muruku"
+        android:paddingStart="32dp"
+        android:textSize="32dp" />
+
+    <TextView
+        android:id="@+id/three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/two"
+        android:layout_margin="16dp"
+        android:text="Fars"
+        android:paddingStart="32dp"
+        android:textSize="32dp" />
+
+    <TextView
+        android:id="@+id/four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/three"
+        android:layout_margin="16dp"
+        android:text="Chap"
+        android:paddingStart="32dp"
+        android:textSize="32dp" />
+
+    <TextView
+        android:id="@+id/five"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/four"
+        android:layout_margin="16dp"
+        android:text="c"
+        android:paddingStart="32dp"
+        android:textSize="32dp" />
+
+</RelativeLayout>

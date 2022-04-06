@@ -25,12 +25,27 @@ public class accountScreen extends AppCompatActivity {
         setContentView(R.layout.activity_account_screen);
 
         settingBtn = findViewById(R.id.SettingsBtnAccountScreen);
+        orderBtn = findViewById(R.id.checkOrderBtnAccountScreen);
+
+
         settingBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openSettingScreen();
             }
         });
+
+        orderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Orders.class));
+            }
+        });
+
+
+
+
+
         accountScreenNavBar = findViewById(R.id.accountScreenNavBar);
         accountScreenNavBar.setSelectedItemId(R.id.accountNavBar);
         accountScreenNavBar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
