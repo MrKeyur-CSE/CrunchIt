@@ -51,11 +51,10 @@ public class settingScreen extends AppCompatActivity {
         Intent intent= new Intent(this, editAccountScreen.class);
         startActivity(intent);
     }
+
     public void Signout(){
         Intent intent= new Intent(this,LoginScreen.class);
         startActivity(intent);
         finish();
-
-
     }
 }
