@@ -70,7 +70,6 @@ public class RegistrationScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
                 fullName = userFullNameEdtTxt.getText().toString().trim();
                 email = emailEdtTxt.getText().toString().trim();
                 phNumber = phNumberEdtTxt.getText().toString().trim();
@@ -112,7 +111,7 @@ public class RegistrationScreen extends AppCompatActivity {
                                     }
                                 });
                             } else {
-                                Toast.makeText(getApplicationContext(), "Registration Failed...", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "User Already Exist...", Toast.LENGTH_LONG).show();
                             }
                         }
                     });

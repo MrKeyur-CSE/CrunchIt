@@ -38,7 +38,7 @@ public class accountScreen extends AppCompatActivity {
         orderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Orders.class));
+                startActivity(new Intent(accountScreen.this, Orders.class));
             }
         });
 
@@ -69,9 +69,5 @@ public class accountScreen extends AppCompatActivity {
         Intent intent= new Intent(this, settingScreen.class);
         startActivity(intent);
         finish();
-
-
     }
-
-
 }

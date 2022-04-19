@@ -19,7 +19,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/loginimg" />
 
-
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/email"
         android:layout_width="wrap_content"
@@ -37,7 +36,6 @@
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/password"
@@ -73,13 +71,12 @@
         app:layout_constraintTop_toBottomOf="@+id/pass"
         app:layout_constraintVertical_bias="0.0" />
 
-
     <TextView
         android:id="@+id/notRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="161dp"
-        android:layout_marginTop="-105dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="-100dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="28dp"
         android:fontFamily="@font/poppins"
@@ -95,8 +92,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="-55dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="-53dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/poppins"
         android:text="Forgot password?"
@@ -105,8 +102,5 @@
         app:layout_constraintEnd_toStartOf="@+id/textView5"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
-
-
-
 
 </LinearLayout>
