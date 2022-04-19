@@ -8,7 +8,7 @@
 
 
     <EditText
-        android:id="@+id/one"
+        android:id="@+id/searchBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -17,45 +17,50 @@
         android:paddingStart="32dp"
         android:textSize="48dp" />
 
-
-    <TextView
-        android:id="@+id/two"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/one"
-        android:layout_margin="16dp"
-        android:text="Muruku"
-        android:paddingStart="32dp"
-        android:textSize="32dp" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchBar">
 
-    <TextView
-        android:id="@+id/three"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/two"
-        android:layout_margin="16dp"
-        android:text="Fars"
-        android:paddingStart="32dp"
-        android:textSize="32dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/four"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/three"
-        android:layout_margin="16dp"
-        android:text="Chap"
-        android:paddingStart="32dp"
-        android:textSize="32dp" />
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/five"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/four"
-        android:layout_margin="16dp"
-        android:text="c"
-        android:paddingStart="32dp"
-        android:textSize="32dp" />
+                <GridView
+                    android:id="@+id/ButtonGrid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_weight=".30"
+                    android:horizontalSpacing="16dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="16dp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/TopSellerLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout"
+                android:text="Top Sellers" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ListOfProducts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TopSellerLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="12dp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

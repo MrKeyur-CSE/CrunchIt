@@ -185,21 +185,6 @@ public class HomeScreen extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     Bitmap downloadThumbnail(String url){
 
         thumbs = storageReference.child(url);
