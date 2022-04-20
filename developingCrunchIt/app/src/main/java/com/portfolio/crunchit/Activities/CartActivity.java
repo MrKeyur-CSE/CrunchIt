@@ -19,8 +19,8 @@ public class CartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
 
+        accountScreenNavBar = findViewById(R.id.homeScreenNavbar);
 
-        accountScreenNavBar = findViewById(R.id.accountScreenNavBar);
         accountScreenNavBar.setSelectedItemId(R.id.accountNavBar);
         accountScreenNavBar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
