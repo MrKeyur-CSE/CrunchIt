@@ -7,6 +7,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.portfolio.crunchit.R;
@@ -22,6 +25,7 @@ import com.portfolio.crunchit.R;
 
 public class ForgotPassword extends DialogFragment {
 
+    Handler mHandler = new Handler();
 
     public EditText emailAddress;
     public Button ConfirmButton;
@@ -73,6 +77,7 @@ public class ForgotPassword extends DialogFragment {
             @Override
             public void onClick(View view) {
                 String emailString =  emailAddress.getText().toString().trim();
+                Log.e("------------------>", emailString);
                 if (emailString.isEmpty()){
                     emailAddress.setError("Enter valid email");
                     return;
@@ -80,8 +85,29 @@ public class ForgotPassword extends DialogFragment {
                 mAuth.sendPasswordResetEmail(emailString).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful())
-                            Toast.makeText(getContext(), "An email has been sent to the above address", Toast.LENGTH_SHORT).show();
+                        if (task.isSuccessful()){
+                            Log.e("------------------>", "Successss");
+                            mHandler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    instance.dismiss();
+                                    Toast.makeText(getContext(), "An email has been sent to the above address", Toast.LENGTH_SHORT).show();
+                                }
+                            }, 1000);
+                        }
+
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        mHandler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                instance.dismiss();
+                                Toast.makeText(getContext(), "Unable to find your email. Please check credentials.", Toast.LENGTH_SHORT).show();
+                            }
+                        }, 1000);
+
                     }
                 });
             }
