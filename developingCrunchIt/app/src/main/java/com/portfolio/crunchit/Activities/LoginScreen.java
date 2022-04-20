@@ -15,10 +15,13 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.portfolio.crunchit.Fragments.ForgotPassword;
 import com.portfolio.crunchit.R;
 
 public class LoginScreen extends AppCompatActivity {
     private FirebaseAuth mAuth;
+
+    TextView forgotPassword;
 
     String email = "", password = "";
     @Override
@@ -34,6 +37,15 @@ public class LoginScreen extends AppCompatActivity {
         final EditText mPass = findViewById(R.id.password);
         final Button mLoginBtn = findViewById(R.id.loginBtn);
         final TextView mNotRegister = findViewById(R.id.notRegister);
+        forgotPassword = findViewById(R.id.forgotpass);
+
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ForgotPassword temp = new ForgotPassword();
+                temp.show(getSupportFragmentManager(), "Forgot Password?");
+            }
+        });
 
         mNotRegister.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -9,7 +9,7 @@
         <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/drawable/roundedbutton.xml" value="0.183" />
         <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/drawable/testSquareImg_background.xml" value="0.111" />
         <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/activity_account_screen.xml" value="0.18" />
-        <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/activity_cart.xml" value="0.1" />
+        <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/activity_cart.xml" value="0.22" />
         <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/activity_checkout_screen.xml" value="0.1" />
         <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/activity_edit_account_screen.xml" value="0.22" />
         <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/activity_home_screen.xml" value="0.12" />
@@ -20,6 +20,8 @@
         <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/activity_search.xml" value="0.18" />
         <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/activity_setting_screen.xml" value="0.25" />
         <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/fragment_blank.xml" value="0.10104166666666667" />
+        <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/fragment_forgot_password.xml" value="0.33" />
+        <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/fragment_forgot_password2.xml" value="0.16545532278751604" />
         <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/fragment_list_item.xml" value="0.4255874673629243" />
         <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/layout/navbar.xml" value="0.16545532278751604" />
         <entry key="..\:/Github/CrunchIt/developingCrunchIt/app/src/main/res/menu/menu.xml" value="0.33" />
