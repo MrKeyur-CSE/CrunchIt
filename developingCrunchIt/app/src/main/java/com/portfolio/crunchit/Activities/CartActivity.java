@@ -26,7 +26,7 @@ public class CartActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
-                    case R.id.homeNavBar: break;
+                    case R.id.homeNavBar: startActivity(new Intent(getApplicationContext(), HomeScreen.class)); break;
                     case R.id.searchNavBar:startActivity(new Intent(getApplicationContext(), SearchScreen.class)); break;
                     case R.id.cartNavBar:break;
                     case R.id.accountNavBar: startActivity(new Intent(getApplicationContext(), accountScreen.class)); break;

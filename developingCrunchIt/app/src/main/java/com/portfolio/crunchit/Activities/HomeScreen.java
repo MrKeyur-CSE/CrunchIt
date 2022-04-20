@@ -109,7 +109,7 @@ public class HomeScreen extends AppCompatActivity {
                     referenceThumb.copy(downloadThumbnail(imgUrl).getConfig(), true);
                     Log.e(" Item---------------- ", key);
                     Log.e(" Url----------------- ", imgUrl);
-                    Item temp = new Item(itemName, itemCost, referenceThumb);
+                    Item temp = new Item(itemName, itemCost, downloadThumbnail(imgUrl));
                     listOfItems.add(temp);
                 }
                 itemSelectorAdapter.notifyDataSetChanged();
@@ -174,7 +174,7 @@ public class HomeScreen extends AppCompatActivity {
                 switch(item.getItemId()){
                     case R.id.homeNavBar: break;
                     case R.id.searchNavBar:startActivity(new Intent(getApplicationContext(), SearchScreen.class)); break;
-                    case R.id.cartNavBar:break;
+                    case R.id.cartNavBar:startActivity(new Intent(getApplicationContext(), CartActivity.class)); break;
                     case R.id.accountNavBar: startActivity(new Intent(getApplicationContext(), accountScreen.class)); break;
 
                 }
