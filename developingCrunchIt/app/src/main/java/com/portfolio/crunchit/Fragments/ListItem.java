@@ -12,11 +12,6 @@ import com.portfolio.crunchit.R;
 
 import java.net.URI;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ListItem#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class ListItem extends Fragment {
 
     private static final String Name = "Item Name";
