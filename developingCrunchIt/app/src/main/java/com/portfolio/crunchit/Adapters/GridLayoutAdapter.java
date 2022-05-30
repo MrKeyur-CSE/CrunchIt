@@ -1,6 +1,7 @@
 package com.portfolio.crunchit.Adapters;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.graphics.drawable.IconCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.portfolio.crunchit.Abstract.Item;
@@ -43,6 +45,7 @@ public class GridLayoutAdapter extends ArrayAdapter {
         TextView itemName = listitemView.findViewById(R.id.itemTitle);
         ImageView itemThumbs = listitemView.findViewById(R.id.itemImage);
         itemName.setText(item.getItemName());
+        itemThumbs.setImageBitmap(BitmapFactory.decodeResource(getContext().getResources(), R.drawable.loginimg));
         return listitemView;
     }
 

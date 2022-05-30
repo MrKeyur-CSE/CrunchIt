@@ -21,7 +21,7 @@ public class Orders extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orders);
 
-        accountScreenNavBar = findViewById(R.id.accountScreenNavBar);
+        accountScreenNavBar = findViewById(R.id.homeScreenNavbar);
         accountScreenNavBar.setSelectedItemId(R.id.accountNavBar);
         accountScreenNavBar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
