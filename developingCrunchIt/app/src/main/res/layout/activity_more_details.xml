@@ -30,7 +30,7 @@
     </TextView>
 
     <TextView
-        android:id="@+id/price"
+        android:id="@+id/itemPrice"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="0dp"
@@ -39,7 +39,7 @@
     </TextView>
 
     <TextView
-        android:id="@+id/description"
+        android:id="@+id/itemDescription"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginLeft="10dp"
