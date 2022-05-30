@@ -24,7 +24,6 @@ import com.portfolio.crunchit.R;
 public class settingScreen extends AppCompatActivity {
     private Button signOutBtn;
     private  Button editProfileBtn;
-    private Button backBtn;
 
     FirebaseDatabase database;
     DatabaseReference myRef;
@@ -38,7 +37,7 @@ public class settingScreen extends AppCompatActivity {
 
         signOutBtn = findViewById(R.id.signOutBtn);
         editProfileBtn = findViewById(R.id.editProfileBtn);
-        backBtn =findViewById(R.id.backBtn2);
+
 
         editProfileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,12 +56,7 @@ public class settingScreen extends AppCompatActivity {
             }
         });
 
-        backBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(settingScreen.this, accountScreen.class));
-            }
-        });
+
 
 
         TextView fullName, emailId, phoneNo;
