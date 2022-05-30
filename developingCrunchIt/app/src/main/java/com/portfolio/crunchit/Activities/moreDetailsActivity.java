@@ -4,8 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -28,6 +30,7 @@ public class moreDetailsActivity extends AppCompatActivity {
     StorageReference storageReference;
     StorageReference thumbs;
 
+    ImageView itemImage;
     TextView itemNameTV;
     TextView itemPriceTV;
     TextView itemDescriptionTV;
@@ -38,6 +41,7 @@ public class moreDetailsActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
+        itemImage = findViewById(R.id.image);
         itemNameTV = findViewById(R.id.itemName);
         itemPriceTV = findViewById(R.id.itemPrice);
         itemDescriptionTV = findViewById(R.id.itemDescription);
@@ -59,6 +63,7 @@ public class moreDetailsActivity extends AppCompatActivity {
                 String itemCost = snapshot.child("itemCost").getValue().toString();
                 String itemDescription = snapshot.child("itemDescription").getValue() != null?snapshot.child("itemDescription").getValue().toString():"No description found";
 
+                itemImage.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.loginimg));
                 itemNameTV.setText(itemName);
                 itemPriceTV.setText(itemCost + " CAD");
                 itemDescriptionTV.setText(itemDescription);
