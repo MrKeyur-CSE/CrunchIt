@@ -39,6 +39,7 @@ import com.portfolio.crunchit.R;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class HomeScreen extends AppCompatActivity {
 
@@ -100,8 +101,10 @@ public class HomeScreen extends AppCompatActivity {
                 listOfItems.clear();
                 listSnapshotReturn = snapshot;
                 for (DataSnapshot ds : snapshot.getChildren()) {
+                    String itemId = ds.getKey().toString();
                     String itemName = ds.child("itemName").getValue().toString();
                     String itemCost = ds.child("itemCost").getValue().toString();
+                    String itemDescription = ds.child("itemDescription").getValue() != null?ds.child("itemDescription").getValue().toString():"No description found";
                     String key = ds.getKey();
                     //String imgUrl = "images/" + itemName +"/"+ ds.child("thumbUrl").getValue().toString();//
                     String imgUrl = "images/Muruku/image.png";
@@ -109,7 +112,7 @@ public class HomeScreen extends AppCompatActivity {
                     referenceThumb.copy(downloadThumbnail(imgUrl).getConfig(), true);
                     Log.e(" Item---------------- ", key);
                     Log.e(" Url----------------- ", imgUrl);
-                    Item temp = new Item(itemName, itemCost, downloadThumbnail(imgUrl));
+                    Item temp = new Item(itemId, itemName, itemCost, itemDescription, downloadThumbnail(imgUrl));
                     listOfItems.add(temp);
                 }
                 itemSelectorAdapter.notifyDataSetChanged();
@@ -126,7 +129,9 @@ public class HomeScreen extends AppCompatActivity {
         itemSelectorAdapter.setOnItemClickListener(new InventoryAdapter.onItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                Toast.makeText(HomeScreen.this, "Clicked on me -- " +position, Toast.LENGTH_SHORT).show();
+                Intent moreInfoIntent = new Intent(getApplicationContext(), moreDetailsActivity.class);
+                moreInfoIntent.putExtra("CurrentItem", listOfItems.get(position).itemId);
+                startActivity(moreInfoIntent);
             }
         });
 
