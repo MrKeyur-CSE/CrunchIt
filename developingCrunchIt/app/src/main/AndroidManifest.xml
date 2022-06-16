@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CrunchIt">
         <activity
+            android:name=".ProductReview"
+            android:exported="false" />
+        <activity
+            android:name=".addnNewPayment"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentMethod"
+            android:exported="false" />
+        <activity
+            android:name=".Payment"
+            android:exported="false" />
+        <activity
             android:name=".Activities.moreDetailsActivity"
             android:exported="false" />
         <activity

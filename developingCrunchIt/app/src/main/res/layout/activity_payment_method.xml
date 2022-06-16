@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="#070707">
+
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/poppins"
+        android:text="Back"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/creditCardDate"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/creditCard"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="217dp"
+        android:layout_marginBottom="-158dp"
+        android:backgroundTint="#807E7E"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:shadowColor="#686666"
+        android:text="MM/YY"
+        android:textAlignment="textStart"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/creditCardCVV"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/creditCard"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="48dp"
+        android:layout_marginBottom="-155dp"
+        android:backgroundTint="#807E7E"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:shadowColor="#686666"
+        android:text="CVV"
+        android:textAlignment="textStart"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/newMethodLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/backBtn"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-88dp"
+        android:fontFamily="@font/poppins"
+        android:text="saved payment methods"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/creditCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/newMethodLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="39dp"
+        android:layout_marginBottom="-101dp"
+        android:fontFamily="@font/poppins"
+        android:text="Card Name"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/creditCardNumber"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/creditCard"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="-70dp"
+        android:backgroundTint="#807E7E"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:shadowColor="#686666"
+        android:text="Card Number"
+        android:textAlignment="textStart"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/orTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/newMethodLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="177dp"
+        android:layout_marginBottom="-329dp"
+        android:fontFamily="@font/poppins"
+        android:text="OR"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/addNewPayment"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBottom="@id/orTextview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+
+        android:layout_marginBottom="-88dp"
+        android:background="@drawable/bluetheme_roundshape"
+        android:fontFamily="@font/poppins"
+        android:text="Add New Payment Method"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="637dp" />
+
+    <Button
+        android:id="@+id/proceedPayment"
+        android:layout_width="318dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBottom="@id/addNewPayment"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="170dp"
+
+        android:layout_marginBottom="-150dp"
+        android:background="@drawable/bluetheme_roundshape"
+        android:fontFamily="@font/poppins"
+        android:text="Proceed payment"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="637dp" />
+
+
+</RelativeLayout>
