@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!--ImageVIew to display our Course Image-->
         <ImageView
             android:id="@+id/customerImage"
             android:layout_width="100dp"
@@ -24,7 +23,6 @@
             android:padding="5dp"
             android:src="@drawable/img" />
 
-        <!--Text View to display Course Name-->
         <TextView
             android:id="@+id/customerName"
             android:layout_width="match_parent"
@@ -37,7 +35,6 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <!--Text VIew to display COurse Rating-->
         <!--Image used in present in drawable folder-->
         <TextView
             android:id="@+id/customerAddress"

@@ -1,7 +1,5 @@
 package com.portfolio.crunchit.Activities;
 
-import static java.lang.System.out;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,18 +8,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Debug;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.signin.internal.Storage;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -39,14 +31,12 @@ import com.portfolio.crunchit.Abstract.Order;
 import com.portfolio.crunchit.Adapters.GridLayoutAdapter;
 import com.portfolio.crunchit.Adapters.InventoryAdapter;
 import com.portfolio.crunchit.Abstract.Item;
+import com.portfolio.crunchit.Processes.NotificationManager;
 import com.portfolio.crunchit.R;
-import com.portfolio.crunchit.business.Business;
-import com.portfolio.crunchit.business.StatusMessages;
+import com.portfolio.crunchit.Business.Business;
+import com.portfolio.crunchit.Business.StatusMessages;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
 
 public class HomeScreen extends AppCompatActivity {
 
@@ -217,6 +207,9 @@ public class HomeScreen extends AppCompatActivity {
                 return false;
             }
         });
+
+        Intent notificationService = new Intent(this.getApplicationContext(), NotificationManager.class);
+        startService(notificationService);
     }
 
 

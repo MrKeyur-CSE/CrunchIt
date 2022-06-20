@@ -1,4 +1,4 @@
-package com.portfolio.crunchit.business;
+package com.portfolio.crunchit.Business;
 
 import androidx.annotation.NonNull;
 
@@ -43,7 +43,7 @@ public class Business {
         ordersRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                numberOfChildren[0] = snapshot.exists() && snapshot.hasChildren()?snapshot.getChildrenCount() + 1:0;
+                numberOfChildren[0] = snapshot.getChildrenCount() + 1;
             }
 
             @Override
