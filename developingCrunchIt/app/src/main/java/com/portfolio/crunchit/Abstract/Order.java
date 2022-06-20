@@ -6,17 +6,15 @@ public class Order {
     public String orderId;
     public String placedBy;
     public String status;
-    public List<Item> itemsInOrder;
-    public Order(){
+    public List<String> itemsInOrder;
 
-    }
+    public Order(){}
 
-    public Order(String id, String who, List<Item> items, String state){
-        setOrderId(id);
-        setPlacedBy(who);
-        setItemsInOrder(items);
-        setStatus(state);
-
+    public Order(String id, String who, List<String> items, String state){
+        orderId = id;
+        placedBy = who;
+        status = state;
+        itemsInOrder = items;
     }
 
     public String getOrderId() {
@@ -41,11 +39,11 @@ public class Order {
     public void setStatus(String status) {
         this.status = status;
     }
-    public List<Item> getItemsInOrder() {
+    public List<String> getItemsInOrder() {
         return itemsInOrder;
     }
 
-    public void setItemsInOrder(List<Item> itemsInOrder) {
+    public void setItemsInOrder(List<String> itemsInOrder) {
         this.itemsInOrder = itemsInOrder;
     }
 

@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.portfolio.crunchit">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,17 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CrunchIt">
+        <service
+            android:name=".Processes.NotificationManager"
+            android:exported="false"/>
+
         <activity
-            android:name=".ProductReview"
+            android:name=".Activities.ProductReview"
             android:exported="false" />
         <activity
-            android:name=".addnNewPayment"
+            android:name=".Activities.addnNewPayment"
             android:exported="false" />
         <activity
-            android:name=".PaymentMethod"
-            android:exported="false" />
-        <activity
-            android:name=".Payment"
+            android:name=".Activities.PaymentMethod"
             android:exported="false" />
         <activity
             android:name=".Activities.moreDetailsActivity"

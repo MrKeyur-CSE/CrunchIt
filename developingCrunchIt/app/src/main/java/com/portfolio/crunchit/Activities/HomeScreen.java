@@ -26,6 +26,8 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -39,9 +41,11 @@ import com.portfolio.crunchit.Adapters.InventoryAdapter;
 import com.portfolio.crunchit.Abstract.Item;
 import com.portfolio.crunchit.R;
 import com.portfolio.crunchit.business.Business;
+import com.portfolio.crunchit.business.StatusMessages;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class HomeScreen extends AppCompatActivity {
@@ -56,6 +60,8 @@ public class HomeScreen extends AppCompatActivity {
     public BottomNavigationView homeScreenNavBar;
     public GridView catButtonGrid;
 
+    FirebaseUser currentUser;
+    FirebaseAuth mAuth;
     FirebaseDatabase database;
     DataSnapshot listSnapshotReturn;
     DatabaseReference databaseRefRoot;
@@ -72,6 +78,8 @@ public class HomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
 
         database = FirebaseDatabase.getInstance();
         databaseRefRoot = database.getReference("Items");
@@ -146,8 +154,13 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onButtonThreeClick(int position) {
                 Toast.makeText(getApplicationContext(), "Instabuy has been clicked", Toast.LENGTH_SHORT).show();
-                Order toBePlaced = new Order();
-                Business.placeOrder(toBePlaced);
+                ArrayList<String> temp = new ArrayList<String>();
+                temp.add(listOfItems.get(position).itemId);
+                Order toBePlaced = new Order(Business.generateOrderId(), currentUser.getUid(), temp, "PLACED");
+               // Log.e("Order to be placed ----->",toBePlaced.orderId.toString());
+                if(Business.placeOrder(toBePlaced) == StatusMessages.SUCCESS){
+                    Toast.makeText(getApplicationContext(), "Order has been placed", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
