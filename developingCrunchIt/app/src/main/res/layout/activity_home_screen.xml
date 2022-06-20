@@ -42,7 +42,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/TopSellerLabel"
             android:layout_centerHorizontal="true"
-            android:layout_margin="12dp" />
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp" />
 
 
 

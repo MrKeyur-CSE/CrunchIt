@@ -145,6 +145,16 @@ public class SearchScreen extends AppCompatActivity {
             public void onItemClick(int position) {
                 Toast.makeText(SearchScreen.this, "Clicked on me -- " + position, Toast.LENGTH_SHORT).show();
             }
+
+            @Override
+            public void onButtonTwoClick(int position) {
+
+            }
+
+            @Override
+            public void onButtonThreeClick(int position) {
+
+            }
         });
     }
 

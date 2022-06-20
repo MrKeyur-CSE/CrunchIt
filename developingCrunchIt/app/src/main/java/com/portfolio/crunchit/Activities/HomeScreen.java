@@ -12,6 +12,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Debug;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.MenuItem;
@@ -32,10 +33,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.portfolio.crunchit.Abstract.Order;
 import com.portfolio.crunchit.Adapters.GridLayoutAdapter;
 import com.portfolio.crunchit.Adapters.InventoryAdapter;
 import com.portfolio.crunchit.Abstract.Item;
 import com.portfolio.crunchit.R;
+import com.portfolio.crunchit.business.Business;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -133,7 +136,22 @@ public class HomeScreen extends AppCompatActivity {
                 moreInfoIntent.putExtra("CurrentItem", listOfItems.get(position).itemId);
                 startActivity(moreInfoIntent);
             }
+
+            @Override
+            public void onButtonTwoClick(int position) {
+                Toast.makeText(getApplicationContext(), "add to cart has been clicked", Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onButtonThreeClick(int position) {
+                Toast.makeText(getApplicationContext(), "Instabuy has been clicked", Toast.LENGTH_SHORT).show();
+                Order toBePlaced = new Order();
+                Business.placeOrder(toBePlaced);
+            }
         });
+
+
 
         databaseRefInventory.addValueEventListener(inventoryListener);
         itemSelectorAdapter.notifyDataSetChanged();
@@ -200,7 +218,6 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onSuccess(byte[] bytes) {
                 finalImage[0] = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-                Toast.makeText(getApplicationContext(), "Images downloaded", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
