@@ -17,7 +17,7 @@
         android:textSize="35sp" />
 
     <Button
-        android:id="@+id/catagory"
+        android:id="@+id/category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -33,7 +33,7 @@
         android:id="@+id/items"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/catagory"
+        android:layout_alignTop="@+id/category"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:fontFamily="@font/poppins"

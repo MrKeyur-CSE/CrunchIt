@@ -4,6 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/328ef8b1f0eb6c0fc2f0a5f09f475a69/transformed/firebase-messaging-23.0.3/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/328ef8b1f0eb6c0fc2f0a5f09f475a69/transformed/firebase-messaging-23.0.3/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/328ef8b1f0eb6c0fc2f0a5f09f475a69/transformed/firebase-messaging-23.0.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2052c3a5f40f1525b859ff2cd6310a47/transformed/firebase-messaging-23.0.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2052c3a5f40f1525b859ff2cd6310a47/transformed/firebase-messaging-23.0.3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/2052c3a5f40f1525b859ff2cd6310a47/transformed/firebase-messaging-23.0.3/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-messaging/23.0.3/9815389fdacf518e39058ca8b0d71c81f4055c2b/firebase-messaging-23.0.3-javadoc.jar!/" />

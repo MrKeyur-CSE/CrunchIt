@@ -4,6 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/196992be433e2cb0775afede78901d07/transformed/firebase-iid-interop-17.1.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/196992be433e2cb0775afede78901d07/transformed/firebase-iid-interop-17.1.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/196992be433e2cb0775afede78901d07/transformed/firebase-iid-interop-17.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f7c17067dc4823ccdd0a82b8a9e13032/transformed/firebase-iid-interop-17.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f7c17067dc4823ccdd0a82b8a9e13032/transformed/firebase-iid-interop-17.1.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f7c17067dc4823ccdd0a82b8a9e13032/transformed/firebase-iid-interop-17.1.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-iid-interop/17.1.0/7fad4ae6f5c2016d5c7babbbf020b6ac08a9cb08/firebase-iid-interop-17.1.0-javadoc.jar!/" />

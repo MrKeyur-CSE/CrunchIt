@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button Catagory = findViewById(R.id.catagory);
+        Button Catagory = findViewById(R.id.category);
         Button Item = findViewById(R.id.items);
 
         Catagory.setOnClickListener(new View.OnClickListener() {

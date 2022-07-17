@@ -22,6 +22,7 @@ import com.portfolio.crunchit.R;
 
 
 public class NotificationManager extends IntentService {
+    private static int NOTIFICATION_ID = 0;
     private static final String CHANNEL_ID = "MAIN CHANNEL";
     public FirebaseDatabase database;
     public DatabaseReference ordersRef;
@@ -37,6 +38,7 @@ public class NotificationManager extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
+
         database = FirebaseDatabase.getInstance();
         usersRef = database.getReference();
         ordersRef = database.getReference("Orders");
@@ -44,7 +46,6 @@ public class NotificationManager extends IntentService {
         ordersRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Log.e("Notification Manager", ordersRef.getKey());
 
                 NotificationBuilder();
             }
@@ -81,7 +82,7 @@ public class NotificationManager extends IntentService {
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(getApplicationContext());
 
-        notificationManager.notify(0, builder.build());
+        notificationManager.notify(NOTIFICATION_ID++, builder.build());
 
 
     }

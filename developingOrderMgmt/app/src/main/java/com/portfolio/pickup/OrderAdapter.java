@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class OrderAdapter extends RecyclerView.Adapter<com.portfolio.pickup.OrderAdapter.InventoryViewHolder> {
+public class OrderAdapter extends Recycle`rView.Adapter<com.portfolio.pickup.OrderAdapter.InventoryViewHolder> {
 
     public interface onItemClickListener{
         void onItemClick(int position);

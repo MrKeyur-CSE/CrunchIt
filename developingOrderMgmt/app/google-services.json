@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "863779526827",
+    "firebase_url": "https://crunchit-3918d-default-rtdb.firebaseio.com",
+    "project_id": "crunchit-3918d",
+    "storage_bucket": "crunchit-3918d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863779526827:android:9a6b3ffb6345ca8905ffee",
+        "android_client_info": {
+          "package_name": "com.portfolio.crunchit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863779526827-ocka30ehta5avpci68unpah9i5t11isr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfXEl8njZVTC93bQ9ep64Z8ItD0ybrYVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863779526827-ocka30ehta5avpci68unpah9i5t11isr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863779526827:android:5119af6d3dd1744b05ffee",
+        "android_client_info": {
+          "package_name": "com.portfolio.pickup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863779526827-ocka30ehta5avpci68unpah9i5t11isr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfXEl8njZVTC93bQ9ep64Z8ItD0ybrYVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863779526827-ocka30ehta5avpci68unpah9i5t11isr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
