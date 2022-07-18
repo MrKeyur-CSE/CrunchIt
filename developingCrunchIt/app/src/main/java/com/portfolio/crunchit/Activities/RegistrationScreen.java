@@ -20,7 +20,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.portfolio.crunchit.Abstract.User;
+import com.portfolio.crunchit.Processes.NotificationManager;
 import com.portfolio.crunchit.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class RegistrationScreen extends AppCompatActivity {
 
@@ -102,16 +106,22 @@ public class RegistrationScreen extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
-                                User newUser = new User(fullName, email, phNumber);
+                                List<String> fcmtokens = new ArrayList<String>();
+                                fcmtokens.add(NotificationManager.getToken(getApplicationContext()).toString());
+
+                                User newUser = new User(fullName, email, phNumber, fcmtokens);
+
                                 myRef.child("Users").child(user.getUid()).setValue(newUser).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
+                                        if(task.isSuccessful()){
                                         Toast.makeText(getApplicationContext(), "Sign up successful.", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(getApplicationContext(), HomeScreen.class));
                                     }
-                                });
-                            } else {
-                                Toast.makeText(getApplicationContext(), "User Already Exist...", Toast.LENGTH_LONG).show();
+                                }
+                            });
+                            }else {
+                                Toast.makeText(getApplicationContext(), "Something went wrong... + " + task.getException(), Toast.LENGTH_LONG).show();
                             }
                         }
                     });

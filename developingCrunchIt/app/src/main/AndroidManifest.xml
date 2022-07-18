@@ -11,8 +11,11 @@
         android:theme="@style/Theme.CrunchIt">
         <service
             android:name=".Processes.NotificationManager"
-            android:exported="false"/>
-
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
         <activity
             android:name=".Activities.ProductReview"
             android:exported="false" />
