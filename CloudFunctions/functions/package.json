@@ -2,6 +2,8 @@
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "scripts": {
+    "emulators:start": "firebase emulators:start",
+    "stop": "lsof -t -i :5001 -i:5002 | xargs kill -9",
     "serve": "firebase emulators:start --only functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
@@ -14,7 +16,7 @@
   "main": "index.js",
   "dependencies": {
     "firebase-admin": "^10.0.2",
-    "firebase-functions": "^3.22.0"
+    "firebase-functions": "^3.18.0"
   },
   "devDependencies": {
     "firebase-functions-test": "^0.2.0"
