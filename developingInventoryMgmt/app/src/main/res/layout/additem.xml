@@ -11,15 +11,15 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint=""
-            android:textSize="20dp"
-            android:padding="15dp"
-            android:fontFamily="@font/poppins"
-            android:textColor="@color/black"
-            android:background="@drawable/editextbg"
-            android:layout_alignParentRight="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"/>
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/editextbg"
+            android:fontFamily="@font/poppins"
+            android:hint=""
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/nameOfItem"
